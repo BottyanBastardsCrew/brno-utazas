@@ -842,6 +842,94 @@
       line-height: 1.6;
     }
 
+    .price-estimate-section {
+      margin-top: 56px;
+      padding-top: 0;
+    }
+
+    .price-estimate-card {
+      border: 1px solid rgba(20, 24, 33, 0.13);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 253, 247, 0.82);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .price-estimate-intro {
+      padding: 28px 28px 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+      gap: 24px;
+      align-items: end;
+    }
+
+    .price-estimate-intro h2 {
+      margin: 0;
+    }
+
+    .price-estimate-intro p,
+    .price-note {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.68;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(17, 69, 126, 0.04), transparent 24px),
+        rgba(255, 247, 231, 0.62);
+    }
+
+    .price-table {
+      width: 100%;
+      min-width: 1120px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 14px 13px;
+      border-bottom: 1px solid rgba(20, 24, 33, 0.10);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    .price-table th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      color: var(--paper);
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .price-table tr:nth-child(even) td {
+      background: rgba(17, 69, 126, 0.035);
+    }
+
+    .price-table td:first-child {
+      color: var(--red-deep);
+      font-weight: 900;
+    }
+
+    .price-table strong {
+      color: var(--blue-deep);
+    }
+
+    .price-note {
+      padding: 20px 28px 28px;
+      font-weight: 700;
+    }
+
     .tips {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -982,6 +1070,7 @@
       .nav-inner { align-items: flex-start; flex-direction: column; }
       .hero-grid,
       .section-head,
+      .price-estimate-intro,
       .budget-grid,
       .timeline,
       .split-band {
@@ -1052,6 +1141,20 @@
       .ticket-top {
         align-items: flex-start;
         flex-direction: column;
+      }
+      .price-estimate-intro {
+        padding: 22px 18px 16px;
+      }
+      .price-note {
+        padding: 18px;
+      }
+      .price-table {
+        min-width: 980px;
+        font-size: 12px;
+      }
+      .price-table th,
+      .price-table td {
+        padding: 12px 10px;
       }
     }
   </style>
@@ -1432,6 +1535,203 @@
       </div>
 
       <p class="source-note">A képek külső URL-ekről töltődnek, nem kerültek be a repóba. Ha egy szolgáltató tiltja a hotlinkelést, az adott kártya képe nem feltétlenül jelenik meg; végleges foglalás előtt mindig ellenőrizzétek az aktuális nyitvatartást, csoportfoglalási feltételeket és lemondási szabályokat.</p>
+    </section>
+
+    <section id="arbecsles" class="price-estimate-section">
+      <div class="price-estimate-card">
+        <div class="price-estimate-intro">
+          <div>
+            <div class="section-kicker">Helyszínek árbecslése</div>
+            <h2>Hozzávetőleges árak Brnóban</h2>
+          </div>
+          <p>
+            Az árak becslések, konkrét dátum és aktuális menü alapján változhatnak.
+            Átváltás: kb. <strong>1 CZK ≈ 14,8 Ft</strong>.
+            Sörár-becslés: Brnóban egy <strong>0,5 literes csapolt sör</strong> általában
+            kb. <strong>55–90 CZK</strong>, azaz kb. <strong>800–1 350 Ft</strong>.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Kategória</th>
+                <th>Hely</th>
+                <th>1 sör, 0,5 l</th>
+                <th>Főétel / alap tétel</th>
+                <th>Példa fogyasztás</th>
+                <th>Becsült helyi ár</th>
+                <th>Becsült HUF</th>
+                <th>Megjegyzés</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Étterem</td>
+                <td><strong>Stopkova Plzeňská Pivnice</strong></td>
+                <td>kb. 70–90 CZK</td>
+                <td>kb. 270–530 CZK</td>
+                <td>1 sör + 1 főétel / fő</td>
+                <td>kb. 340–620 CZK / fő</td>
+                <td><strong>kb. 5 000–9 200 Ft / fő</strong></td>
+                <td>A Stopkova Foodora-listáján 1,5 l Pilsner Urquell 214 CZK, ebből arányosan kb. 71 CZK / 0,5 l. Helyben fogyasztva 70–90 CZK-val érdemes számolni.</td>
+              </tr>
+
+              <tr>
+                <td>Étterem</td>
+                <td><strong>Lokál U Caipla</strong></td>
+                <td>kb. 60–85 CZK</td>
+                <td>kb. 210–470 CZK</td>
+                <td>1 sör + 1 főétel / fő</td>
+                <td>kb. 270–555 CZK / fő</td>
+                <td><strong>kb. 4 000–8 200 Ft / fő</strong></td>
+                <td>Cseh pub-stílusú étterem, ahol a sör + főétel kombinációra középkategóriás brnói belvárosi becsléssel érdemes tervezni.</td>
+              </tr>
+
+              <tr>
+                <td>Étterem</td>
+                <td><strong>Pivovar Pegas</strong></td>
+                <td>kb. 60–90 CZK</td>
+                <td>kb. 190–320 CZK</td>
+                <td>1 sör + 1 főétel / fő</td>
+                <td>kb. 250–410 CZK / fő</td>
+                <td><strong>kb. 3 700–6 100 Ft / fő</strong></td>
+                <td>Sörfőzdés étterem, ezért sörrel mindenképp érdemes számolni. Pontos aktuális itallapot külön ellenőrizni kell.</td>
+              </tr>
+
+              <tr>
+                <td>Étterem</td>
+                <td><strong>Stopkova / Lokál / Pegas</strong></td>
+                <td>kb. 60–90 CZK</td>
+                <td>kb. 220–500 CZK</td>
+                <td>Teljesebb vacsora: sör + főétel + desszert / fő</td>
+                <td>kb. 450–700 CZK / fő</td>
+                <td><strong>kb. 6 700–10 400 Ft / fő</strong></td>
+                <td>Kényelmesebb tervezési sáv: egy ital, főétel, esetleg desszert és borravaló.</td>
+              </tr>
+
+              <tr>
+                <td>Étterem</td>
+                <td><strong>2 fő vacsora összesen</strong></td>
+                <td>2 sör: kb. 120–180 CZK</td>
+                <td>2 főétel: kb. 440–900 CZK</td>
+                <td>2 sör + 2 főétel</td>
+                <td>kb. 560–1 080 CZK / 2 fő</td>
+                <td><strong>kb. 8 300–16 000 Ft / 2 fő</strong></td>
+                <td>Desszerttel, második itallal és borravalóval inkább kb. 16 000–22 000 Ft / 2 fő.</td>
+              </tr>
+
+              <tr>
+                <td>Kávézó</td>
+                <td><strong>Monogram Espresso Bar</strong></td>
+                <td>—</td>
+                <td>espresso / cappuccino</td>
+                <td>1 kávé / fő</td>
+                <td>kb. 60–100 CZK / fő</td>
+                <td><strong>kb. 900–1 500 Ft / fő</strong></td>
+                <td>Specialty espresso bar; inkább rövid, jó minőségű kávés megállónak számolható.</td>
+              </tr>
+
+              <tr>
+                <td>Kávézó</td>
+                <td><strong>Monogram Espresso Bar</strong></td>
+                <td>—</td>
+                <td>kávé + süti</td>
+                <td>1 kávé + 1 süti / fő</td>
+                <td>kb. 140–230 CZK / fő</td>
+                <td><strong>kb. 2 100–3 400 Ft / fő</strong></td>
+                <td>Pontos publikus árlistát nem találtam, ezért specialty kávézós becslés.</td>
+              </tr>
+
+              <tr>
+                <td>Kávézó</td>
+                <td><strong>SKØG Urban Hub</strong></td>
+                <td>—</td>
+                <td>kávé + süti</td>
+                <td>1 kávé + 1 süti / fő</td>
+                <td>kb. 160–280 CZK / fő</td>
+                <td><strong>kb. 2 400–4 100 Ft / fő</strong></td>
+                <td>Modern specialty kávézó/brunch/bar; közép-felső kávézós sávval érdemes tervezni.</td>
+              </tr>
+
+              <tr>
+                <td>Kávézó</td>
+                <td><strong>Café Placzek</strong></td>
+                <td>—</td>
+                <td>kávé + süti</td>
+                <td>1 kávé + 1 süti / fő</td>
+                <td>kb. 150–260 CZK / fő</td>
+                <td><strong>kb. 2 200–3 800 Ft / fő</strong></td>
+                <td>Reggeli/brunch/desszert hely; brunch esetén magasabb költéssel számolj.</td>
+              </tr>
+
+              <tr>
+                <td>Kávézó / brunch</td>
+                <td><strong>Café Placzek vagy SKØG</strong></td>
+                <td>—</td>
+                <td>brunch + kávé</td>
+                <td>reggeli/brunch + kávé / fő</td>
+                <td>kb. 250–450 CZK / fő</td>
+                <td><strong>kb. 3 700–6 700 Ft / fő</strong></td>
+                <td>Ha nem csak kávé+süti, hanem rendes brunch is van, ezzel a sávval számolnék.</td>
+              </tr>
+
+              <tr>
+                <td>Szállás</td>
+                <td><strong>Hotel Continental Brno</strong></td>
+                <td>—</td>
+                <td>1 szoba / 1 éj / 2 fő</td>
+                <td>szoba 2 főre</td>
+                <td>kb. 80–125 USD</td>
+                <td><strong>kb. 29 000–45 000 Ft / szoba</strong></td>
+                <td>KAYAK példák alapján kb. 80–124 USD sáv látható; a pontos ár dátumfüggő.</td>
+              </tr>
+
+              <tr>
+                <td>Szállás</td>
+                <td><strong>Grandhotel Brno</strong></td>
+                <td>—</td>
+                <td>1 szoba / 1 éj / 2 fő</td>
+                <td>szoba 2 főre</td>
+                <td>kb. 100–170 USD</td>
+                <td><strong>kb. 36 000–61 000 Ft / szoba</strong></td>
+                <td>Travel Weekly szerint a Grandhotel Brno ársávja kb. 99–172 USD; vonatos érkezéshez praktikus, mert pályaudvar-közeli.</td>
+              </tr>
+
+              <tr>
+                <td>Szállás</td>
+                <td><strong>Hotel International Brno</strong></td>
+                <td>—</td>
+                <td>1 szoba / 1 éj / 2 fő</td>
+                <td>szoba 2 főre</td>
+                <td>kb. 120–200 EUR</td>
+                <td><strong>kb. 43 000–72 000 Ft / szoba</strong></td>
+                <td>Kényelmesebb, központi hotelként inkább a felső sávval terveznék.</td>
+              </tr>
+
+              <tr>
+                <td>Szállás</td>
+                <td><strong>Pivovar Pegas / Hotel Pegas</strong></td>
+                <td>—</td>
+                <td>1 szoba / 1 éj / 2 fő</td>
+                <td>szoba 2 főre</td>
+                <td>kb. 80–140 EUR</td>
+                <td><strong>kb. 29 000–50 000 Ft / szoba</strong></td>
+                <td>Étterem + sörfőzde + hotel egyben; az ár erősen dátumfüggő.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="price-note">
+          Röviden: kávézó 2 főre kávé + süti kb. <strong>4 500–8 000 Ft</strong>,
+          éttermi egyszerű vacsora 2 főre kb. <strong>10 000–16 000 Ft</strong>,
+          kényelmesebb vacsora kb. <strong>16 000–22 000 Ft</strong>,
+          szállás 1 éjszakára kb. <strong>35 000–70 000 Ft</strong>.
+        </p>
+      </div>
     </section>
 
     <section id="tippek">
