@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagy társaságos Brno | Cseh ihletésű baráti útiterv</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='32' fill='%23fffdf7'/%3E%3Crect y='32' width='64' height='32' fill='%23d7141a'/%3E%3Cpath d='M0 0 34 32 0 64Z' fill='%2311457e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #141821;
+      --ink-soft: #30394b;
+      --blue: #11457e;
+      --blue-deep: #0a2f59;
+      --red: #d7141a;
+      --red-deep: #9f1115;
+      --cream: #fff7e7;
+      --paper: #fffdf7;
+      --foam: #f5ead2;
+      --gold: #e7b64d;
+      --green: #265a43;
+      --line: rgba(20, 24, 33, 0.16);
+      --line-light: rgba(255, 255, 255, 0.34);
+      --shadow: 0 28px 70px rgba(10, 47, 89, 0.18);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Manrope", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(215, 20, 26, 0.20), transparent 31rem),
+        radial-gradient(circle at 92% 2%, rgba(17, 69, 126, 0.22), transparent 34rem),
+        linear-gradient(180deg, var(--cream) 0%, #f4ead5 48%, #efe1c6 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.30;
+      background-image:
+        linear-gradient(45deg, rgba(17, 69, 126, 0.08) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(17, 69, 126, 0.08) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(215, 20, 26, 0.08) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(215, 20, 26, 0.08) 75%);
+      background-position: 0 0, 0 18px, 18px -18px, -18px 0;
+      background-size: 36px 36px;
+      mix-blend-mode: multiply;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1180px, calc(100% - 34px));
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 247, 231, 0.84);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(20, 24, 33, 0.10);
+    }
+
+    .nav-inner {
+      width: min(1180px, calc(100% - 34px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      color: var(--blue-deep);
+      letter-spacing: -0.04em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background: var(--paper);
+      box-shadow: inset 0 0 0 1px rgba(20, 24, 33, 0.12), 0 12px 28px rgba(17, 69, 126, 0.18);
+      color: var(--paper);
+      font-family: var(--font-display);
+      font-size: 20px;
+      isolation: isolate;
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(146deg, var(--blue) 0 45%, transparent 45%),
+        linear-gradient(180deg, var(--paper) 0 50%, var(--red) 50% 100%);
+      z-index: -1;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--red-deep);
+      font-size: 11px;
+      line-height: 1;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      overflow: hidden;
+      isolation: isolate;
+      border-radius: 0 0 52px 52px;
+      color: var(--paper);
+      background: var(--blue-deep);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(100deg, rgba(10, 47, 89, 0.98) 0%, rgba(10, 47, 89, 0.76) 38%, rgba(10, 47, 89, 0.20) 72%),
+        linear-gradient(0deg, rgba(10, 47, 89, 0.94) 0%, rgba(10, 47, 89, 0.08) 52%),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%2C%20katedr%C3%A1la%20sv.%20Petra%20a%20Pavla.jpg") center/cover;
+      z-index: -3;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -18vw;
+      top: -21vw;
+      width: 66vw;
+      height: 66vw;
+      background:
+        linear-gradient(135deg, transparent 0 39%, rgba(255, 255, 255, 0.88) 39% 53%, transparent 53%),
+        linear-gradient(135deg, transparent 0 53%, rgba(215, 20, 26, 0.84) 53% 67%, transparent 67%),
+        linear-gradient(135deg, transparent 0 67%, rgba(17, 69, 126, 0.86) 67% 81%, transparent 81%);
+      transform: rotate(-8deg);
+      opacity: 0.82;
+      z-index: -2;
+    }
+
+    .hero-grid {
+      min-height: 760px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) 0.92fr;
+      gap: 42px;
+      align-items: end;
+      padding: 92px 0 74px;
+    }
+
+    .hero-copy { max-width: 820px; }
+
+    .czech-strip {
+      width: 240px;
+      height: 10px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      margin-bottom: 26px;
+      border-radius: 999px;
+      overflow: hidden;
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
+    }
+
+    .czech-strip span:nth-child(1) { background: var(--blue); }
+    .czech-strip span:nth-child(2) { background: var(--paper); }
+    .czech-strip span:nth-child(3) { background: var(--red); }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      letter-spacing: -0.055em;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 102px);
+      line-height: 0.88;
+      margin: 0 0 28px;
+      max-width: 920px;
+    }
+
+    .hero p {
+      color: rgba(255, 253, 247, 0.86);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.58;
+      margin: 0 0 34px;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 19px;
+      border-radius: 999px;
+      border: 1px solid var(--line-light);
+      font-weight: 900;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.20);
+    }
+
+    .button.primary {
+      background: var(--paper);
+      color: var(--blue-deep);
+      border-color: transparent;
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--paper);
+    }
+
+    .group-panel {
+      align-self: center;
+      justify-self: end;
+      width: min(100%, 430px);
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255, 253, 247, 0.22), rgba(255, 253, 247, 0.10)),
+        rgba(10, 47, 89, 0.34);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+    }
+
+    .ticket {
+      position: relative;
+      padding: 22px;
+      border-radius: 24px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 0 50%, transparent 0 15px, var(--paper) 16px),
+        radial-gradient(circle at 100% 50%, transparent 0 15px, var(--paper) 16px),
+        linear-gradient(90deg, transparent 0 14px, var(--paper) 14px calc(100% - 14px), transparent calc(100% - 14px));
+      box-shadow: inset 0 0 0 1px rgba(20, 24, 33, 0.08);
+    }
+
+    .ticket-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 2px dashed rgba(20, 24, 33, 0.22);
+    }
+
+    .ticket-label {
+      color: var(--red-deep);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .ticket-route {
+      margin-top: 5px;
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .ticket-badge {
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background:
+        linear-gradient(145deg, var(--blue) 0 48%, var(--red) 48% 100%);
+      color: var(--paper);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .ticket-list {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ticket-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    .ticket-list strong {
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    .quick-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: -46px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .stat-card,
+    .card {
+      border: 1px solid rgba(20, 24, 33, 0.13);
+      background: rgba(255, 253, 247, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .stat-card {
+      min-height: 164px;
+      padding: 21px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue) 0 36%, var(--paper) 36% 62%, var(--red) 62% 100%);
+    }
+
+    .stat-label,
+    .section-kicker {
+      color: var(--red-deep);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .stat-label { margin-bottom: 14px; }
+
+    .stat-value {
+      font-family: var(--font-display);
+      color: var(--blue-deep);
+      font-size: 34px;
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: -0.06em;
+    }
+
+    .stat-note {
+      margin-top: 10px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    section { padding: 92px 0 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 390px);
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section-kicker { margin-bottom: 10px; }
+
+    h2 {
+      font-size: clamp(34px, 4.5vw, 62px);
+      line-height: 0.94;
+      margin: 0;
+      color: var(--blue-deep);
+    }
+
+    .section-head p,
+    .muted {
+      color: var(--ink-soft);
+      line-height: 1.68;
+    }
+
+    .section-head p { margin: 0; }
+
+    .card {
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .budget-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 18px;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price-row:last-child { border-bottom: 0; }
+
+    .price-row strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .price-row span {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .price {
+      min-width: 112px;
+      text-align: right;
+      color: var(--green);
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+    }
+
+    .highlight-box {
+      min-height: 100%;
+      display: grid;
+      align-content: space-between;
+      gap: 24px;
+      color: var(--paper);
+      background:
+        linear-gradient(145deg, rgba(17, 69, 126, 0.98) 0%, rgba(10, 47, 89, 0.94) 58%, rgba(215, 20, 26, 0.88) 100%);
+      border-color: rgba(255, 255, 255, 0.22);
+    }
+
+    .highlight-box .section-kicker { color: var(--foam); }
+    .highlight-box .muted { color: rgba(255, 253, 247, 0.82); }
+
+    .big-number {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 8vw, 88px);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      line-height: 0.9;
+    }
+
+    .group-rules {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .rule {
+      min-height: 260px;
+      padding: 24px;
+    }
+
+    .rule-number {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      color: var(--paper);
+      background: linear-gradient(145deg, var(--blue), var(--red));
+      font-weight: 900;
+    }
+
+    .rule h3 {
+      margin: 0 0 10px;
+      color: var(--blue-deep);
+      font-size: 27px;
+      line-height: 1;
+    }
+
+    .rule p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.62;
+      font-size: 15px;
+    }
+
+    .route-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      background:
+        linear-gradient(180deg, rgba(255, 253, 247, 0.88), rgba(255, 253, 247, 0.74));
+    }
+
+    .route-stop {
+      border: 1px solid var(--line);
+      background: rgba(255, 247, 231, 0.72);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+    }
+
+    .route-stop:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -16px;
+      top: 50%;
+      width: 31px;
+      height: 3px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, var(--blue), var(--red));
+      z-index: 2;
+      border-radius: 999px;
+    }
+
+    .route-stop small {
+      color: var(--red-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 900;
+    }
+
+    .route-stop h3 {
+      margin: 8px 0;
+      color: var(--blue-deep);
+      font-size: 25px;
+    }
+
+    .route-stop p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .day-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .day-image {
+      min-height: 280px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .day-image::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 48%;
+      background: linear-gradient(0deg, rgba(10, 47, 89, 0.68), transparent);
+    }
+
+    .day-image.day1 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%2C%20Petrov%20z%20Opu%C5%A1t%C4%9Bn%C3%A9.jpg"); }
+    .day-image.day2 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Spilberk%20142.JPG"); }
+
+    .day-body { padding: 24px; }
+
+    .day-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .day-title h3 {
+      margin: 0;
+      color: var(--blue-deep);
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .pill {
+      white-space: nowrap;
+      border-radius: 999px;
+      padding: 8px 11px;
+      color: var(--paper);
+      background: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .steps {
+      display: grid;
+      gap: 13px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid rgba(20, 24, 33, 0.10);
+      background: rgba(255, 247, 231, 0.70);
+      border-radius: var(--radius-md);
+    }
+
+    .time {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .step strong { display: block; margin-bottom: 4px; }
+
+    .step span {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.52;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .place-card {
+      padding: 0;
+      overflow: hidden;
+      transition: transform 0.22s ease, border-color 0.22s ease;
+    }
+
+    .place-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(17, 69, 126, 0.38);
+    }
+
+    .place-img {
+      height: 230px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .img-petrov { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Cathedral%20St.%20Peter%20and%20Paul-02.jpg"); }
+    .img-castle { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Spilberk%20Castle-06.jpg"); }
+    .img-cafe { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20View%20from%20Spilberk%20131.JPG"); }
+
+    .place-body { padding: 21px; }
+
+    .place-body h3 {
+      margin: 0 0 10px;
+      color: var(--blue-deep);
+      font-size: 25px;
+    }
+
+    .place-body p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .recommend-group {
+      margin-top: 34px;
+    }
+
+    .recommend-group:first-of-type {
+      margin-top: 0;
+    }
+
+    .recommend-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .recommend-card {
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .recommend-img {
+      height: 218px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .recommend-img::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 42%, rgba(10, 47, 89, 0.68) 100%),
+        linear-gradient(135deg, rgba(17, 69, 126, 0.18), rgba(215, 20, 26, 0.10));
+    }
+
+    .rec-restaurant-1 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Cathedral%20St.%20Peter%20and%20Paul-02.jpg"); }
+    .rec-restaurant-2 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20View%20from%20Spilberk%20131.JPG"); }
+    .rec-restaurant-3 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Spilberk%20Castle-06.jpg"); }
+    .rec-cafe-1 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20View%20from%20Spilberk%20131.JPG"); }
+    .rec-cafe-2 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Cathedral%20St.%20Peter%20and%20Paul-02.jpg"); }
+    .rec-cafe-3 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Spilberk%20Castle-06.jpg"); }
+    .rec-hotel-1 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20View%20from%20Spilberk%20131.JPG"); }
+    .rec-hotel-2 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Cathedral%20St.%20Peter%20and%20Paul-02.jpg"); }
+    .rec-hotel-3 { background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Brno%20Spilberk%20Castle-06.jpg"); }
+
+    .recommend-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .recommend-body h3 {
+      margin: 0;
+      color: var(--blue-deep);
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .recommend-body p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid rgba(17, 69, 126, 0.16);
+      border-radius: 999px;
+      background: rgba(17, 69, 126, 0.07);
+      color: var(--blue-deep);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rec-link {
+      margin-top: auto;
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: 1px solid rgba(215, 20, 26, 0.24);
+      border-radius: 999px;
+      background: rgba(215, 20, 26, 0.09);
+      color: var(--red-deep);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .source-note {
+      margin: 16px 0 0;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .tip {
+      min-height: 204px;
+      padding: 20px;
+    }
+
+    .tip-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      color: var(--paper);
+      background: linear-gradient(145deg, var(--blue), var(--red));
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .tip h3 {
+      margin: 0 0 8px;
+      color: var(--blue-deep);
+      font-size: 19px;
+    }
+
+    .tip p {
+      margin: 0;
+      color: var(--ink-soft);
+      line-height: 1.58;
+      font-size: 14px;
+    }
+
+    .split-band {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .beer-card {
+      min-height: 360px;
+      color: var(--paper);
+      background:
+        radial-gradient(circle at 24% 18%, rgba(255, 253, 247, 0.85) 0 28px, transparent 29px),
+        radial-gradient(circle at 35% 24%, rgba(255, 253, 247, 0.74) 0 18px, transparent 19px),
+        linear-gradient(180deg, #e1a830 0 22%, #c98224 22% 100%);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .beer-card h3 {
+      margin: 160px 0 14px;
+      max-width: 360px;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 0.94;
+      color: var(--paper);
+      text-shadow: 0 3px 16px rgba(0, 0, 0, 0.22);
+    }
+
+    .beer-card p {
+      max-width: 430px;
+      margin: 0;
+      color: rgba(255, 253, 247, 0.92);
+      line-height: 1.62;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 13px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid rgba(20, 24, 33, 0.10);
+      background: rgba(255, 247, 231, 0.68);
+      border-radius: var(--radius-md);
+    }
+
+    .check {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--green);
+      color: var(--paper);
+      font-weight: 900;
+    }
+
+    .check-list strong {
+      display: block;
+      color: var(--blue-deep);
+      margin-bottom: 3px;
+    }
+
+    .check-list span {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 82px 0 38px;
+      text-align: center;
+      color: var(--ink-soft);
+    }
+
+    .footer-card {
+      border: 1px solid rgba(20, 24, 33, 0.13);
+      border-radius: var(--radius-xl);
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(17, 69, 126, 0.92) 0%, rgba(10, 47, 89, 0.92) 52%, rgba(215, 20, 26, 0.88) 100%);
+      color: rgba(255, 253, 247, 0.84);
+      box-shadow: var(--shadow);
+    }
+
+    .footer-card strong { color: var(--paper); }
+
+    .footer-card .muted {
+      color: rgba(255, 253, 247, 0.74);
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 960px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; }
+      .hero-grid,
+      .section-head,
+      .budget-grid,
+      .timeline,
+      .split-band {
+        grid-template-columns: 1fr;
+      }
+      .group-panel { justify-self: start; width: min(100%, 560px); }
+      .quick-cards,
+      .tips,
+      .recommend-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .group-rules,
+      .places-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .route-card { grid-template-columns: 1fr; }
+      .route-stop:not(:last-child)::after { display: none; }
+      .hero,
+      .hero-grid {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page,
+      .nav-inner {
+        width: min(100% - 22px, 1180px);
+      }
+      .nav-links { display: none; }
+      .hero { border-radius: 0 0 34px 34px; }
+      .hero-grid { padding: 74px 0 58px; }
+      .hero::after {
+        width: 105vw;
+        height: 105vw;
+        top: -30vw;
+        right: -58vw;
+        opacity: 0.52;
+      }
+      .quick-cards,
+      .group-rules,
+      .places-grid,
+      .tips,
+      .recommend-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-card { min-height: auto; }
+      section { padding-top: 68px; }
+      .price-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .price {
+        text-align: left;
+      }
+      .day-title {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .step {
+        grid-template-columns: 1fr;
+      }
+      .day-image,
+      .place-img,
+      .recommend-img {
+        min-height: 210px;
+        height: 210px;
+      }
+      .ticket-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="Nagy társaságos Brno kezdőlap">
+        <span class="brand-mark">B</span>
+        <span><small>cseh trikolór</small>Nagy társaságos Brno</span>
+      </a>
+      <div class="nav-links">
+        <a href="#koltseg">Költség</a>
+        <a href="#csapat">Csapatlogika</a>
+        <a href="#utvonal">Vonat</a>
+        <a href="#uterv">Útiterv</a>
+        <a href="#ajanlatok">Helyek</a>
+        <a href="#tippek">Tippek</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="page hero-grid">
+      <div class="hero-copy">
+        <div class="czech-strip" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h1>Cseh hétvége Brnóban, nagy baráti társaságra hangolva</h1>
+        <p>Vonatos minikirándulás Budapest felől 12–18 főre: Petrov, Špilberk, villamosok, közös vacsora, sörkert és olyan ritmus, ahol együtt marad a csapat, de senki nem érzi túlvezéreltnek a hétvégét.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#uterv">Mutasd a társaságos útitervet</a>
+          <a class="button secondary" href="#csapat">Nézd meg a csapatlogikát</a>
+        </div>
+      </div>
+
+      <aside class="group-panel" aria-label="Cseh ihletésű csoportjegy">
+        <div class="ticket">
+          <div class="ticket-top">
+            <div>
+              <div class="ticket-label">baráti expedíció</div>
+              <div class="ticket-route">Budapest → Brno</div>
+            </div>
+            <div class="ticket-badge">12–18<br>fő</div>
+          </div>
+          <ul class="ticket-list">
+            <li><span>Hangulat</span><strong>morva város + sörkert</strong></li>
+            <li><span>Tempó</span><strong>közös mag, szabad blokkok</strong></li>
+            <li><span>Fókusz</span><strong>asztalfoglalás, közös kassza</strong></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="quick-cards" aria-label="Gyors összefoglaló">
+      <article class="stat-card">
+        <div class="stat-label">Ajánlott méret</div>
+        <div class="stat-value">12–18 fő</div>
+        <div class="stat-note">Elég nagy a közös hangulathoz, még kezelhető foglalásokkal.</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">Keret fejenként</div>
+        <div class="stat-value">55–85k Ft</div>
+        <div class="stat-note">Vonat, 1 éjszaka, étkezés, helyi mozgás és kis tartalék.</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">Csapatritmus</div>
+        <div class="stat-value">3 blokk</div>
+        <div class="stat-note">Közös érkezés, választható délután, nagy esti találkozó.</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">Cseh hangulat</div>
+        <div class="stat-value">vár + sör</div>
+        <div class="stat-note">Špilberk panoráma, Petrov fotók, belvárosi sörkert.</div>
+      </article>
+    </div>
+
+    <section id="koltseg">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Költségterv nagyobb társaságnak</div>
+          <h2>Fejenként számoljatok, közös kasszával a helyszínen</h2>
+        </div>
+        <p>Nagy csapatnál nem az összeg nagysága a legnagyobb kockázat, hanem a széteső fizetés. A legjobb modell: mindenki saját vonat és szállás, plusz egy kisebb közös kassza vacsorára, villamosra és foglalási előlegekre.</p>
+      </div>
+
+      <div class="budget-grid">
+        <article class="card">
+          <div class="price-row">
+            <div>
+              <strong>Vonat oda-vissza</strong>
+              <span>Fejenkénti nemzetközi jegy, lehetőleg azonos indulással. Nagy csapatnál legyen közös jegyvásárlási határidő.</span>
+            </div>
+            <div class="price">20–32k Ft</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <strong>Szállás 1 éjszakára</strong>
+              <span>2–4 fős szobák vagy apartmanok a belváros, Petrov, Špilberk vagy főpályaudvar környékén.</span>
+            </div>
+            <div class="price">22–38k Ft</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <strong>Közös vacsora és ital</strong>
+              <span>Előre foglalt hosszú asztal, cseh konyha, sörkert vagy nagyobb söröző.</span>
+            </div>
+            <div class="price">10–18k Ft</div>
+          </div>
+          <div class="price-row">
+            <div>
+              <strong>Helyi mozgás és tartalék</strong>
+              <span>Villamosjegy, kisebb belépők, közös kassza, késő esti snack.</span>
+            </div>
+            <div class="price">3–8k Ft</div>
+          </div>
+        </article>
+
+        <aside class="card highlight-box">
+          <div>
+            <div class="section-kicker">Javasolt közös ritmus</div>
+            <div class="big-number">70k Ft</div>
+          </div>
+          <p class="muted">Reális, kényelmes fejenkénti keret 1 éjszakára. Ha a csapat nagyobb, ne egy ember finanszírozza előre az egészet: legyen fix fizetési határidő, közös táblázat és 8–12 ezer Ft-os közös kassza fejenként.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="csapat">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Csapatlogika</div>
+          <h2>Nagy társaságnál a design is legyen közösségi</h2>
+        </div>
+        <p>A program úgy működik jól, ha van néhány közös fix pont, de marad tér kisebb klikkeknek is. Ez tartja barátinak a hétvégét, nem osztálykirándulássá.</p>
+      </div>
+
+      <div class="group-rules">
+        <article class="card rule">
+          <div class="rule-number">01</div>
+          <h3>Közös mag</h3>
+          <p>Vonat, első belvárosi séta, esti vacsora és másnapi indulás legyen közös. Ezek adják a társasági élményt.</p>
+        </article>
+        <article class="card rule">
+          <div class="rule-number">02</div>
+          <h3>Szabad ágak</h3>
+          <p>Délután két opció legyen: Špilberk panoráma vagy kávézós Zelný trh kör. Így a tempó különbözhet, a találkozási pont mégis tiszta.</p>
+        </article>
+        <article class="card rule">
+          <div class="rule-number">03</div>
+          <h3>Foglalás előre</h3>
+          <p>12 fő felett vacsorát, sörözőt és szállást nem érdemes spontán hagyni. Egy felelős intézi, de mindenki előre utal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="utvonal">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Vonatos útvonal</div>
+          <h2>Budapesttől Brnóig csoportbarát menetrenddel</h2>
+        </div>
+        <p>A cél nem a legkorábbi indulás, hanem az, hogy a csapat együtt érkezzen és még legyen energiája estére. Nagy társaságnál a késésekre és csatlakozásokra is kell puffer.</p>
+      </div>
+
+      <article class="card route-card">
+        <div class="route-stop">
+          <small>1. lépés</small>
+          <h3>Közös indulási pont</h3>
+          <p>Budapest-Nyugati vagy Keleti, egyértelmű találkozási idővel. Aki késik, ne az egész csapatot tartsa fel.</p>
+        </div>
+        <div class="route-stop">
+          <small>2. lépés</small>
+          <h3>Brno hlavní nádraží</h3>
+          <p>A főpályaudvar közel van a belvároshoz. Érkezés után rövid csomaglogisztika, majd közös első séta.</p>
+        </div>
+        <div class="route-stop">
+          <small>3. lépés</small>
+          <h3>Belvárosi bázis</h3>
+          <p>Szállás több szobával vagy egymáshoz közeli apartmanokkal. A fókusz: gyalogos táv és könnyű esti hazajutás.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="uterv">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">1 éjszakás társaságos útiterv</div>
+          <h2>Közös élmény, kevés felesleges rohanás</h2>
+        </div>
+        <p>A nagy csapatnak nem kell minden percben együtt mozognia. A program fix találkozási pontokra és választható sávokra épül.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="card day-card">
+          <div class="day-image day1" role="img" aria-label="Brno történelmi belvárosa"></div>
+          <div class="day-body">
+            <div class="day-title">
+              <h3>1. nap: érkezés, Petrov, nagy vacsora</h3>
+              <span class="pill">szombat</span>
+            </div>
+            <ol class="steps">
+              <li class="step"><div class="time">08:00</div><div><strong>Indulás Budapestről</strong><span>Közös kocsiszám vagy vagonrész, előre kiosztott jegyekkel és egyszerű reggeli csomaggal.</span></div></li>
+              <li class="step"><div class="time">12:30</div><div><strong>Érkezés Brnóba</strong><span>Csomagok lepakolása, gyors belvárosi orientáció, majd könnyű ebéd kisebb csoportokban.</span></div></li>
+              <li class="step"><div class="time">15:00</div><div><strong>Petrov és Zelný trh</strong><span>Közös fotópont, katedrális környéke, piac és rövid kávészünet.</span></div></li>
+              <li class="step"><div class="time">17:00</div><div><strong>Szabad ágak</strong><span>Špilberk séta a panorámáért vagy belvárosi kávézós kör azoknak, akik lassabb tempót akarnak.</span></div></li>
+              <li class="step"><div class="time">20:00</div><div><strong>Hosszú asztalos cseh vacsora</strong><span>Első választásnak Stopkova vagy Lokál U Caipla, alternatívának Pivovar Pegas. Közös kassza, utána Náměstí Svobody esti séta.</span></div></li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="card day-card">
+          <div class="day-image day2" role="img" aria-label="Špilberk vár Brnóban"></div>
+          <div class="day-body">
+            <div class="day-title">
+              <h3>2. nap: lassú reggel, vár, hazaút</h3>
+              <span class="pill">vasárnap</span>
+            </div>
+            <ol class="steps">
+              <li class="step"><div class="time">09:30</div><div><strong>Kényelmes reggeli</strong><span>Café Placzek vagy SKØG jó brunch-találkozó, a Monogram inkább rövidebb specialty kávés megálló.</span></div></li>
+              <li class="step"><div class="time">11:00</div><div><strong>Špilberk vagy óvárosi kör</strong><span>Akik fotóznának, menjenek fel a várhoz. A többiek maradhatnak a kompakt belvárosban.</span></div></li>
+              <li class="step"><div class="time">13:30</div><div><strong>Záró ebéd és csomagfelvétel</strong><span>Rövid, szervezett visszarendeződés: fizetés, csomagok, villamos vagy gyalog a pályaudvarra.</span></div></li>
+              <li class="step"><div class="time">15:00</div><div><strong>Vonat Budapestre</strong><span>Délutáni hazaút, estére mindenki visszaér. A későbbi vonat legyen B-tervként elmentve.</span></div></li>
+            </ol>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="latnivalok">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Cseh hangulatpontok</div>
+          <h2>Kevés, de erős brnói megálló</h2>
+        </div>
+        <p>Nagy társaságnál a túl sok látványosság széthúzza a napot. Három erős hely elég ahhoz, hogy cseh ihletésű, városos és közösségi legyen az út.</p>
+      </div>
+
+      <div class="places-grid">
+        <article class="card place-card">
+          <div class="place-img img-petrov" role="img" aria-label="Petrov-katedrális Brnóban"></div>
+          <div class="place-body">
+            <h3>Petrov-katedrális</h3>
+            <p>Brno ikonikus sziluettje. Ide jó közös fotót, első városképet és rövid, könnyen követhető sétát tervezni.</p>
+          </div>
+        </article>
+
+        <article class="card place-card">
+          <div class="place-img img-castle" role="img" aria-label="Špilberk vár Brnóban"></div>
+          <div class="place-body">
+            <h3>Špilberk-vár</h3>
+            <p>Panoráma, park, várfalak. A csapat sportosabb része felmehet, a többiekhez később könnyű visszacsatlakozni.</p>
+          </div>
+        </article>
+
+        <article class="card place-card">
+          <div class="place-img img-cafe" role="img" aria-label="Brno belvárosi látkép"></div>
+          <div class="place-body">
+            <h3>Náměstí Svobody</h3>
+            <p>Esti találkozási pontnak praktikus: központi, sok hely van körülötte, és könnyű innen sörözőbe vagy villamosra menni.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ajanlatok">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Éttermek, kávézók, szállások</div>
+          <h2>Konkrét helyek a nagy társaságos Brno-hétvégéhez</h2>
+        </div>
+        <p>A brno2 ajánlásait a meglévő oldal logikájába emeltem át: vacsorához csoportbarát cseh helyek, reggelihez és délutáni pihenőhöz kávézók, alváshoz pedig belvárosi vagy pályaudvar-közeli szállások.</p>
+      </div>
+
+      <div class="recommend-group">
+        <div class="section-kicker">Éttermek vacsorához</div>
+        <div class="recommend-grid">
+          <article class="card recommend-card">
+            <div class="recommend-img rec-restaurant-1" role="img" aria-label="Stopkova Plzeňská Pivnice Brno"></div>
+            <div class="recommend-body">
+              <h3>Stopkova Plzeňská Pivnice</h3>
+              <div class="tag-row"><span class="tag">300 férőhely</span><span class="tag">4 különterem</span><span class="tag">akadálymentes + Wi-Fi</span></div>
+              <p>Klasszikus cseh étterem-söröző nagyobb társaságnak. A Firmy adatai alapján nagy kapacitású hely, ezért hétvégi közös vacsorához ez a legerősebb, legbiztosabb opció.</p>
+              <a class="rec-link" href="https://en.firmy.cz/company/2691997-stopkova-plzenska-pivnice-brno-mesto.html" target="_blank" rel="noopener">Forrás / részletek →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-restaurant-2" role="img" aria-label="Lokál U Caipla Brno környéke"></div>
+            <div class="recommend-body">
+              <h3>Lokál U Caipla</h3>
+              <div class="tag-row"><span class="tag">Kozí 115/3</span><span class="tag">foglalható</span><span class="tag">központi pub</span></div>
+              <p>Cseh pub-hangulat, központi helyen, saját oldalon jelzett foglalási lehetőséggel. Akkor jó, ha a csapat helyi, laza, nem túl formális vacsorát szeretne.</p>
+              <a class="rec-link" href="https://lokal-ucaipla.ambi.cz/en/reservations/" target="_blank" rel="noopener">Foglalás / részletek →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-restaurant-3" role="img" aria-label="Pivovar Pegas Brno hangulatkép"></div>
+            <div class="recommend-body">
+              <h3>Pivovar Pegas</h3>
+              <div class="tag-row"><span class="tag">sörfőzde</span><span class="tag">étterem + hotel</span><span class="tag">belváros</span></div>
+              <p>Belvárosi sörfőzde, étterem és hotel egyben. A saját oldala szerint a sörfőzde a vendégek előtt működik, ezért erős cseh hangulatú alternatíva vacsorához.</p>
+              <a class="rec-link" href="https://hotelpegas.com/en/" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="recommend-group">
+        <div class="section-kicker">Kávézók reggelihez és pihenőhöz</div>
+        <div class="recommend-grid">
+          <article class="card recommend-card">
+            <div class="recommend-img rec-cafe-1" role="img" aria-label="SKØG Urban Hub Brno környéke"></div>
+            <div class="recommend-body">
+              <h3>SKØG Urban Hub</h3>
+              <div class="tag-row"><span class="tag">specialty coffee</span><span class="tag">koktél</span><span class="tag">vegetáriánus ételek</span></div>
+              <p>Modern, fiatalos kávézó-bár Dominikánské náměstí környékén. Hosszabb nyitvatartása miatt rugalmas találkozóponthoz, délutáni pihenőhöz is jól illik.</p>
+              <a class="rec-link" href="https://www.skog.cz/" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-cafe-2" role="img" aria-label="Café Placzek Brno hangulatkép"></div>
+            <div class="recommend-body">
+              <h3>Café Placzek</h3>
+              <div class="tag-row"><span class="tag">brunch</span><span class="tag">desszert</span><span class="tag">szállás felette</span></div>
+              <p>Központi kávézó reggelihez, brunchhoz vagy desszerthez. Saját oldala külön említi, hogy a kávézó felett szállás is működik, ami logisztikailag praktikus lehet.</p>
+              <a class="rec-link" href="https://cafeplaczek.cz/" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-cafe-3" role="img" aria-label="Monogram Espresso Bar Brno környéke"></div>
+            <div class="recommend-body">
+              <h3>Monogram Espresso Bar</h3>
+              <div class="tag-row"><span class="tag">Kapucínské náměstí 12</span><span class="tag">kültéri ülőhely</span><span class="tag">kártyás fizetés</span></div>
+              <p>Kifejezetten specialty kávéra fókuszáló kisebb espresso bar. Nagy csapatnak nem hosszú ülős hely, inkább rövid, minőségi kávés megálló.</p>
+              <a class="rec-link" href="https://europeancoffeetrip.com/cafe/monogramespressobar-brno/" target="_blank" rel="noopener">Forrás / részletek →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="recommend-group">
+        <div class="section-kicker">Szállások 1 éjszakára</div>
+        <div class="recommend-grid">
+          <article class="card recommend-card">
+            <div class="recommend-img rec-hotel-1" role="img" aria-label="Hotel Continental Brno környéke"></div>
+            <div class="recommend-body">
+              <h3>Hotel Continental Brno</h3>
+              <div class="tag-row"><span class="tag">3 perc a központ</span><span class="tag">214 szoba</span><span class="tag">100 garázshely</span></div>
+              <p>Központközeli, de csendesebb hotel. Nagy társaságnál a sok szoba és a garázskapacitás miatt stabilabb bázis lehet, mint több apró apartman.</p>
+              <a class="rec-link" href="https://www.continentalbrno.cz/en" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-hotel-2" role="img" aria-label="Hotel International Brno"></div>
+            <div class="recommend-body">
+              <h3>Hotel International Brno</h3>
+              <div class="tag-row"><span class="tag">belváros</span><span class="tag">reggelizőétterem</span><span class="tag">terasz</span></div>
+              <p>Kényelmesebb, belvárosi opció. Saját oldala reggelizőéttermet, teraszt és városközponti kilátást említ, ezért rövid városnézős hétvégéhez kényelmes választás.</p>
+              <a class="rec-link" href="https://www.hotelinternational.cz/en/" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+
+          <article class="card recommend-card">
+            <div class="recommend-img rec-hotel-3" role="img" aria-label="Brno főpályaudvar környéke"></div>
+            <div class="recommend-body">
+              <h3>Grandhotel Brno</h3>
+              <div class="tag-row"><span class="tag">pályaudvar közel</span><span class="tag">Garden Restaurant & Pub</span><span class="tag">reggeli / ebéd / vacsora</span></div>
+              <p>Vonatos érkezéshez praktikus, mert pályaudvar-közeli. A saját információs oldala éttermi és pub lehetőséget is említ, így logisztikailag egyszerű bázis.</p>
+              <a class="rec-link" href="https://grandhotelbrno.cz/en/information-for-guests/" target="_blank" rel="noopener">Megnyitás →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="source-note">A képek részben Brno-hangulatképek, mert nem minden helyhez volt stabilan, szabályosan hotlinkelhető hivatalos fotó a brno2-ben. Végleges foglalás előtt mindig ellenőrizzétek az aktuális nyitvatartást, csoportfoglalási feltételeket és lemondási szabályokat.</p>
+    </section>
+
+    <section id="tippek">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Praktikus tippek</div>
+          <h2>Így nem esik szét a nagy csapat</h2>
+        </div>
+        <p>A cseh hangulat akkor működik igazán, ha a háttérlogisztika egyszerű. Ezeket érdemes indulás előtt fixálni.</p>
+      </div>
+
+      <div class="tips">
+        <article class="card tip">
+          <div class="tip-icon">CZ</div>
+          <h3>Közös táblázat</h3>
+          <p>Jegy, szállás, szoba, utalás, telefonszám, allergia és késői érkezés legyen egy helyen.</p>
+        </article>
+        <article class="card tip">
+          <div class="tip-icon">₭</div>
+          <h3>Kártya + korona</h3>
+          <p>Kártya sok helyen elég, de kis cseh korona jól jön villamosra, borravalóra vagy gyors snackre.</p>
+        </article>
+        <article class="card tip">
+          <div class="tip-icon">12</div>
+          <h3>Asztalfoglalás</h3>
+          <p>12 fő felett a vacsora legyen előre foglalva. A “majd találunk valamit” itt könnyen szétesik.</p>
+        </article>
+        <article class="card tip">
+          <div class="tip-icon">↔</div>
+          <h3>Találkozási pont</h3>
+          <p>Mindig legyen következő fix pont és időpont. Így a kisebb csapatok bátran külön mozoghatnak.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="split-band">
+        <article class="card beer-card">
+          <h3>Sörkert-hangulat, de nem kötelező ivós program</h3>
+          <p>A cseh ihletés lényege a laza közösségi tér: hosszú asztal, beszélgetés, vacsora, alkoholmentes opciók és könnyű visszajutás a szállásra.</p>
+        </article>
+
+        <article class="card">
+          <ul class="check-list">
+            <li><span class="check">✓</span><div><strong>Foglaljatok hosszú asztalt</strong><span>Ne több külön asztalt kérjetek, mert az rögtön kettévágja a társaságot.</span></div></li>
+            <li><span class="check">✓</span><div><strong>Legyen két tempó</strong><span>Gyorsabb városnézés és lassabb kávézós ág. Este mindenki ugyanoda érkezik vissza.</span></div></li>
+            <li><span class="check">✓</span><div><strong>Közös kassza csak kis tételekre</strong><span>A nagy előlegeket mindenki utalja, a helyszíni közös kassza maradjon egyszerű.</span></div></li>
+            <li><span class="check">✓</span><div><strong>Mentett B-tervek</strong><span>Esőprogram, későbbi vonat, alternatív vacsorahely és taxiszám legyen elmentve indulás előtt.</span></div></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page">
+    <div class="footer-card">
+      <strong>Ajánlott döntés:</strong> 12–18 fős baráti társaságnak szombat reggeli vonat, belvárosi több szobás szállás, fix esti cseh vacsora és vasárnap délutáni hazaút. Reális keret: <strong>55–85 ezer Ft fejenként</strong>.
+      <p class="muted">Az árak becslések, konkrét dátumnál ellenőrizni kell a vonatjegyet és a szállást. A képek Wikimedia Commons Brno, Petrov és Špilberk témájú fotóira épülnek.</p>
+    </div>
+  </footer>
+</body>
+</html>
